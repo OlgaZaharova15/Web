@@ -1,0 +1,26 @@
+﻿body
+{
+    background-color:darkcyan;
+}
+h1
+{
+    color:aliceblue;
+}
+.color-list {
+    color: darkcyan;
+    background-color: aliceblue;
+}
+#geo
+{
+    list-style-type:georgian;
+}
+ol > li /*li вложенный в  ol*/
+{
+    font-family:Arial;
+
+}
+
+li > ul {
+    font-family:Times New Roman;
+}
+
