@@ -8,7 +8,7 @@ h1
 }
 .color-list {
     color: darkcyan;
-    background-color: aliceblue;
+    background-color: darkblue;
 }
 #geo
 {
@@ -19,8 +19,8 @@ ol > li /*li вложенный в  ol*/
     font-family:Arial;
 
 }
-
-li > ul {
+li > ul 
+{
     font-family:Times New Roman;
 }
 

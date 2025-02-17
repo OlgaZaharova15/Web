@@ -1,0 +1,62 @@
+﻿body {
+    font-family: 'Concert',sans-serif;
+    font-weight:700;
+}
+
+.list-style-1
+{
+    list-style-type: upper-roman; /* Нумерация */
+    padding-left: 20px; /* Отступ слева */
+}
+    
+.list-style-1 > li:nth-child(1) 
+{
+        color: red; /* Первый элемент - красный */
+}
+
+.list-style-1 > li:nth-child(2) 
+{
+    color: orange; /* Второй элемент - оранжевй */
+}
+
+.list-style-1 > li:nth-child(3) 
+{
+        color: green; /* Третий элемент - зеленый */
+}
+
+.list-style-1 > li:nth-child(4) 
+{
+        color: blue; /* Четвертый элемент - синий */ 
+
+}
+
+.list-style-1 > li:nth-child(5) 
+{
+        color: purple; /* Пятый элемент - фиолетовый */
+}
+
+.list-style-2 {
+    list-style-type:lower-alpha;
+    color: black;
+}
+
+.list-style-3 {
+    list-style-image: url('ico/orange_marker.png');
+}
+.list-style-4 {
+    list-style-image: url('ico/green_marker.png');
+}
+.list-style-5 {
+    list-style-image: url('ico/red_marker.png');
+}
+.list-style-6 {
+    list-style-image: url('ico/blue_marker.png');
+}
+.list-style-7 {
+    list-style-image: url('ico/black_marker.png');
+}
+.concert-one-regular {
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
