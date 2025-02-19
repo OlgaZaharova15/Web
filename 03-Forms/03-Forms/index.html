@@ -7,6 +7,37 @@
 </head>
 <body>
     <h1>Forms</h1>
+    <form action="handler.php" method="get">
+        <div>
+            <label for="first_name"> Name:</label>
+            <input type="text" placeholder="Введите Ваше имя" name="first_name" required
+                   id="first_name"
+                   size="25"
+                   minlenght="3" maxlength="8"
+                   pattern="^[A-Z][a-z]*" />
+        </div>
+        <div>
+            <label for="passwd"> Password:</label>
+            <input type="password" placeholder="Введите пароль" name="passwd"
+                   id="passwd"
+                   size="25"
+                   minlenght="8" maxlength="24" />
+        </div>
+        <div>
+            <label for="email"> E-mail:</label>
+            <input type="email" placeholder="Введите Вашу почту" name="email"
+                   id="email"
+                   size="25"
+                   minlenght="5" maxlength="24" />
+        </div>
+        <div>
+            <label for="phone"> Phone:</label>
+            <input type="email" placeholder="Введите Вашу почту" name="email"
+                   id="email"
+                   size="25"
+                   minlenght="5" maxlength="24" />
+        </div>
+    </form>
 
 </body>
 </html>
