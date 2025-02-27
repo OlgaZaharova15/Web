@@ -1,5 +1,11 @@
 ﻿body
 {
+    border:solid 3px;
+}
+main {
+    border: solid 3px;
+    width:384px;
+    margin:25px;
 }
 textarea
 {
@@ -22,4 +28,13 @@ option[disabled]
 select[multiple]
 {
     height:144px;
+}
+.eula
+{
+    overflow:scroll;
+    width:350px;
+    height:330px;
+    border:solid 1px;
+    padding:15px;
+    margin:25px 0;
 }

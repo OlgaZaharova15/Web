@@ -1,0 +1,27 @@
+﻿body
+{
+}
+
+img
+{
+    width:768px;
+    height:768px;
+    /*position:absolute;*/
+    /*position:relative;*/
+    position:fixed;
+    top:25px;
+    left:25px;
+    z-index:-1;
+    float:left;
+    margin:25px;
+    /*background-color:white;
+    display:inline-block;*/
+}
+h2
+{
+    position:sticky;
+    top:0;
+    background-color:blue;
+    color:aliceblue;
+
+}

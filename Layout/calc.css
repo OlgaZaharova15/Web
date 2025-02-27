@@ -1,0 +1,95 @@
+﻿body
+{
+    
+}
+#desktop
+{
+    width:98vh;
+   /* height:95vh;*/
+   height:600px;
+  /*  background-color:darkgreen;*/
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.main-window
+{
+    width:520px;
+    height:520px;
+    /*border:solid 1px;*/
+    font-family:Tahoma;
+
+}
+.title-bar 
+{
+    background-image:linear-gradient(#23AAFF,#0259e6,#0367fa,#2379ed);
+    height:32px;
+
+    border-radius:8px 8px 0 0;
+    box-shadow:inset 0px 0px 4px 1px #002195;
+    color:white;
+    text-shadow: 2px 2px darkblue; 
+
+
+    /**/
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.icon
+{
+    width:24px;
+    height:24px;
+    margin:8px;
+}
+.window-control-buttons,.window-title
+{
+    display:flex;
+    align-items:center;
+    margin:4px;
+}
+.window-control-button {
+    width: 24px;
+    height: 24px;
+    margin: 1px;
+    color: white;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom right, #551af5, #2760A2);
+    box-shadow: 1px 1px 3px 1px #771af5;
+    border: solid 1px white;
+    border-radius: 2px;
+}
+    .window-control-button:hover, button:disabled {
+        border-color: lightgrey;
+    }
+    .window-control-button:active {
+        border-color: gray;
+    }
+/*button:disabled {
+    border-color: lightgrey;
+}*/
+.close-button {
+    /* background-image: linear-gradient(to bottom right, #c9a4a5, #c76042);
+    box-shadow:inset 1px 1px 1px 1px #c49a9b;*/
+    /*background-image: url("img/close-button.png");*/
+    background-image: linear-gradient(to bottom right, #c97475, #c76042);
+    box-shadow: 1px 1px 3px 1px #c49a9b;
+}
+
+
+.client-rect
+{
+    background-color:#ebe9d8;
+    height:100%;
+    border:solid 5px;
+    border-top:0;
+    
+    border-image: linear-gradient(to right,#0069fc,#55BbfF,#0069fc) 1 round;
+}
+.debug 
+{
+    border: solid 1px black;
+    
+}
+
