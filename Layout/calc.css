@@ -86,7 +86,104 @@
     border-top:0;
     
     border-image: linear-gradient(to right,#0069fc,#55BbfF,#0069fc) 1 round;
+
+    /*------------------------*/
+    display:flex;
+    flex-direction:column;
 }
+.menu-bar
+{
+    box-shadow: 0px 1px 0px 0px white;
+    padding:2px;
+}
+
+.menu-bar > input[type=button]
+{
+    border:none;
+    background-color:transparent;
+}
+.menu-bar > input[type=button]:hover {
+    /*border: none;
+    background-color: transparent;*/
+    box-shadow:1px 1px 0px 1px grey;
+}
+.client-rect>input[type=text]
+{
+    margin:10px;
+    text-align:right;
+    font-size:18px;
+}
+.display-buttons
+{
+    display:flex;
+   /* margin:10px;*/
+   justify-content:space-around;
+    
+}
+
+/*.display-buttons > div*/
+#square {
+    width: 40px;
+    height: 40px;
+    border: inset 2px;
+    margin: 10px 10px;
+}
+.display-buttons>button{
+
+    width:128px;
+    color:red;
+    margin: 10px 10px;
+      
+
+}
+#memory-buttons {
+    width: 64px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+}
+#memory-buttons>button
+{
+    width:54px;
+    height:44px;
+    margin:5px 5px;
+    color:red;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px;
+}
+#digits {
+    display: grid;
+    grid-template-rows: 44px 44px 44px 44px;
+    grid-template-columns: 54px 54px 54px;
+    grid-gap: 10px;
+    margin:10px;
+    padding:5px;
+    border:solid 1px;
+   
+
+    
+}
+    #digits > button {
+        color: blue;
+       /* margin:5px;*/
+        width:54px;
+        height:44px;
+    }
+
+    button
+    {
+        border: solid 1px darkblue;
+        border-radius:5px;
+
+    }
+    button:hover
+    {
+        background-color:lightgray;
+    }
 .debug 
 {
     border: solid 1px black;
