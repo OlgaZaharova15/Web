@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_3</title>
+</head>
+<body>
+    <h1>Task_3</h1>
+    <p>Вывести на экран ряд Фибоначчи до указанного предела;</p>
+    <h2>Result</h2>
+    <script>
+        function fibonacci(limit) {
+            let fibSeries = []; // Массив для хранения чисел Фибоначчи
+            let a = 0; // Первое число Фибоначчи
+            let b = 1; // Второе число Фибоначчи
+
+            while (a <= limit) {
+                fibSeries.push(a); // Добавляем текущее число в массив
+                let next = a + b; // Вычисляем следующее число
+                a = b; // Сдвигаем a на следующее число
+                b = next; // Сдвигаем b на следующее число
+            }
+
+            return fibSeries; // Возвращаем массив чисел Фибоначчи
+        }
+
+        let userInput = prompt('Введите значение предела: ');
+        let limit = parseInt(userInput);
+
+        if (!isNaN(limit)) {
+           
+            document.write(`Ряд Фибоначчи до ${limit}: ${fibonacci(limit).join(',')}`);
+
+        }
+        else document.write(`Ошибка: Вы ввели некорректно значение предела`);
+    </script>
+</body>
+</html>

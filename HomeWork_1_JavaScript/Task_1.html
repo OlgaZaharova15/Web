@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Task_1</title>
+</head>
+<body>
+    <h1>Task_1</h1>
+    <p>Пользователь вводит число, и на страницу выводится факториал этого числа;</p>
+    <h2>Result</h2>
+    <script>
+        var rez = 1;
+        let userInput =  prompt('Введите число: ');
+        var value = parseInt(userInput);
+        
+        if (!isNaN(value))
+        { 
+            if (value < 0) document.write(`Ошибка: Факториал не определен для отрицательных чисел`);
+            else { 
+                if (value === 0) { rez = 1; }
+                else
+                {
+                    for (let i = 1; i <= value; i++) rez *= i;
+                }
+                document.write(`Факториал числа ${value}: ${rez}`);
+            }
+        }
+        else document.write(`Ошибка: Вы ввели некорректное число`);
+
+    </script>
+</body>
+</html>
