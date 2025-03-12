@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="arrays.css"/>
+    <title>ArraysJS</title>
+</head>
+<body>
+    <h1>ArraysJS</h1>
+
+    <script>
+
+       /* let arr = [3, 5, 8, "Hello", true, 'WordId', 3.14];
+        //arr[17] = 2.7;
+        arr.push(2.7);
+        arr.splice(4, 0, 1024, 2048, 3072, 4096);
+        //arr.ToSpliced(4, 0, 1024, 2048, 3072, 4096);
+        //arr = arr.slice(4,8);
+        for (let i = 0; i < arr.length; i++) { document.writeln(arr[i]); }
+
+        document.writeln('<hr>');
+        document.writeln(typeof arr);
+        document.writeln(Array.isArray(arr[0]));
+        document.writeln('<br>');
+        document.writeln('toString: ' + arr.toString());
+        document.writeln('<hr>');
+        for (let i in arr) { document.writeln(arr[i]); } 
+
+        console.log(arr);
+
+        const week = [];
+        week["Sunday"] = 0;
+        week["Monday"] = 1;
+        week["Tuesday"] = 2;
+        week["Wensday"] = 3;
+        week["Thursday"] = 4;
+        week["Friday"] = 5;
+        week["Satuday"] = 6;
+
+        document.writeln('<hr>');
+
+        for (let i in week) {
+            document.write(i);
+            document.writeln(` ${week[i]}`);
+        } 
+        console.log(week);
+
+        document.writeln('<hr>');
+
+        const seasons = new Array("Winter", "Spring", "Summer", "Autumn");
+        for (let i in seasons) {
+           // document.write(i);
+            document.writeln(` ${seasons[i]}`);
+        } 
+
+        document.writeln('<hr>');
+        //arr.concat(seasons);
+        document.writeln(arr.concat(seasons));
+
+       /*const seasons1 = { "Winter": 0, "Spring": 1, "Summer": 2, "Autumn": 3 };
+        for (let i in seasons1) {
+             document.write(i);
+            document.writeln(` ${seasons1[i]}`);
+        }*/
+
+        /*document.writeln('<hr>');*/
+
+    </script>
+
+    <script>
+        let arr1 =[1, 2, 3];
+        print(arr1);
+
+        let arr =
+            [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9, 11, 15, 16],];
+
+        document.write(arr.join(" <hr> "));
+        document.write('<hr>');
+        document.write('<hr>');
+
+        print(arr);
+
+       /* for (let i in arr.flat()) document.writeln(i);
+        for (let i in arr.flat()) document.writeln(arr[i]);*/
+
+        document.write('<hr>');
+        document.write('<table>');
+        for (let i = 0; i < arr.length; i++)
+
+        {
+            document.write('<tr>');
+            for (let j = 0; j < arr[i].length; j++)
+            {
+                document.write('<td>');
+                document.write(arr[i][j]);
+                document.write('</td>');
+
+            }
+        }
+        document.write('</table>');
+        console.log(arr);
+        console.table(arr);
+        document.write('<hr>');
+        let periods =
+            [
+                ["Sund", "Mond", "Tuesd", "Wend", "Thuurd", "Frid", "Satd",],
+                ["s1", "s2", "s3", "s4"],
+                ["m1", "m2", "m3", "m4"],];
+        console.table(periods);
+        for (let i in periods) {
+            for (j in periods[i]) {
+                document.writeln(periods[i][j]);
+            }
+            document.write('<br>');
+        }
+        document.write('<hr>');
+
+        let periods1 =
+        {
+            week: ["Sund", "Mond", "Tuesd", "Wend", "Thuurd", "Frid", "Satd",],
+            seasons: { "s1": 0, "s2": 1, "s3": 2, "s4": 3 },
+            year: ["m1", "m2", "m3", "m4"],
+        };
+        console.table(periods1);
+
+
+        let values =
+        {
+            "Row0": { "col0": 1, "col1": 2, "col3": 3 },
+            "Row1": { "col0": 4, "col1": 5, "col3": 6 },
+            "Row2": { "col0": 7, "col1": 8, "col3": 9 }
+        };
+        console.table(values);
+        document.writeln('*******');
+        let randomized = [];
+        for (let i = 0; i < 10; i++) {
+            randomized.push(parseInt(Math.random()*100));
+        }
+        print(randomized);
+        document.writeln('*******');
+        function print(arr)
+        {
+            document.write('<hr>');
+            document.write('<table>');
+            for (let i in arr) {
+                if (Array.isArray(arr[i])) {
+                    document.write("<tr>");
+                    for (let j in arr[i]) {
+                        document.write('<td>');
+                        document.write(arr[i][j]);
+                        document.write('</td>');
+                    }
+                    document.write("</tr>");
+
+                }
+                else {
+                    document.write("<td>");
+                    document.writeln(arr[i]);
+                    document.write("</td>");
+                }
+                
+            }
+           
+            document.write('</table>');
+        }
+
+    </script>
+</body>
+</html>
