@@ -173,7 +173,8 @@
         width:54px;
         height:44px;
     }
-
+#operations {
+    display: grid;
     button
     {
         border: solid 1px darkblue;
