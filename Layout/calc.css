@@ -15,8 +15,8 @@
 }
 .main-window
 {
-    width:520px;
-    height:520px;
+    width:460px;
+    height:420px;
     /*border:solid 1px;*/
     font-family:Tahoma;
 
@@ -130,7 +130,7 @@
 }
 .display-buttons>button{
 
-    width:128px;
+    width:108px;
     color:red;
     margin: 10px 10px;
       
@@ -175,7 +175,21 @@
     }
 #operations {
     display: grid;
-    button
+    grid-template-rows: 44px 44px 44px 44px;
+    grid-template-columns: 54px 54px ;
+    grid-gap: 10px;
+    margin: 10px;
+    padding: 5px;
+    border: solid 1px;
+}
+    #operations > button {
+        color: blue;
+        /* margin:5px;*/
+        width: 54px;
+        height: 44px;
+    }
+    
+ button
     {
         border: solid 1px darkblue;
         border-radius:5px;
@@ -185,6 +199,8 @@
     {
         background-color:lightgray;
     }
+
+
 .debug 
 {
     border: solid 1px black;
