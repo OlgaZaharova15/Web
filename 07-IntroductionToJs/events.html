@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Events</title>
+</head>
+<body>
+    
+    <h1>Events</h1>
+    <div id="number" style="width:100px;height:50px;background-color:lightblue" onclick="increment()"></div>
+
+    <input id="text" type="text" oninput="show_text()" />
+    <input id="show" type="button" value="Show" onclick="show_text()" />
+    <div id="display_text"></div>
+
+    <div style="display:grid; grid-gap:5px;">
+        <img id="image" src="#" alt="Выберите картинку: " style="width:200px;height:200px;border:solid 1px;" />
+        <input id="file" type="file" onchange="set_image()" />
+    </div>
+
+
+    <script>//onload="set_init_path()"
+        var i = 0;
+        function increment() {
+
+            i++;
+            //document.writeln(i);
+            let number = document.getElementById("number");
+            number.innerHTML = `<h2>${i}</h2>`;
+
+        }
+
+        function show_text() {
+
+            let text = document.getElementById("text");
+            let display_text = document.getElementById("display_text");
+            display_text.innerHTML = `<h2>${text.value}</h2>`;
+            //alert(text.value);
+        }
+
+        function set_init_path() {
+            let file = document.getElementById("file");
+            file.value = window.location.pathname;
+
+        }
+
+        function set_image() {
+            let image = document.getElementById("image");
+            let path = document.getElementById("file");
+            //let paph = window.location.pathname;
+            //this.value = path;
+            //alert(file.value);
+            let path_splitted = path.value.split('\\');///.findLast();
+
+            let file = path_splitted[path_splitted.length - 1];
+            alert(file);
+            image.src = file;
+
+        }
+
+    </script>
+
+</body>
+</html>
