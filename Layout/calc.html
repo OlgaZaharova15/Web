@@ -27,15 +27,16 @@
                     <input type="button" value="Вид" />
                     <input type="button" value="Справка" />
                 </div>
+                
+                <input id="TempStr" type="text" value="" />
+                <input id="TekStr" type="text" value="" />
 
-                <input type="text" value="0." />
-               
                 <div class="display-buttons">
                     <div id="square"></div>
                     <div class="display-buttons">
-                        <button>Backspase</button>
-                        <button>CE</button>
-                        <button>C</button>
+                        <button name="ButtBs" onclick="click_Button(this)">Backspase</button>
+                        <button name="ButtCE" onclick="click_Button(this)">CE</button>
+                        <button name="ButtC" onclick="click_Button(this)">C</button>
                     </div>
                 </div>
 
@@ -47,32 +48,32 @@
                         <button>M+</button>
                     </div>
                     <div id="digits">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
+                        <button name="Butt7" onclick="click_Button(this)">7</button>
+                        <button name="Butt8" onclick="click_Button(this)">8</button>
+                        <button name="Butt9" onclick="click_Button(this)">9</button>
 
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
+                        <button name="Butt4" onclick="click_Button(this)">4</button>
+                        <button name="Butt5" onclick="click_Button(this)">5</button>
+                        <button name="Butt6" onclick="click_Button(this)">6</button>
 
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                        <button name="Butt1" onclick="click_Button(this)">1</button>
+                        <button name="Butt2" onclick="click_Button(this)">2</button>
+                        <button name="Butt3" onclick="click_Button(this)">3</button>
 
-                        <button>0</button>
+                        <button name="Butt0" onclick="click_Button(this)">0</button>
                         <button>+/-</button>
-                        <button>.</button>
+                        <button name="ButtT" onclick="click_Button(this)">.</button>
                     </div>
                     <div id="operations">
-                        <button>/</button>
-                        <button>*</button>
-                        <button>-</button>
-                        <button>+</button>
+                        <button name="ButtDel" onclick="click_Button(this)">/</button>
+                        <button name="ButtMult" onclick="click_Button(this)">*</button>
+                        <button name="ButtMinus" onclick="click_Button(this)">-</button>
+                        <button name="ButtPlus" onclick="click_Button(this)">+</button>
 
                         <button>sqrt</button>
                         <button>%</button>
                         <button>1/x</button>
-                        <button>=</button>
+                        <button name="ButtRez" onclick="click_Button(this)">=</button>
                     </div>
 
 
@@ -80,8 +81,167 @@
 
                 </div>
 
-        </div>
+            </div>
     </div>
+
+    <script>
+
+      var rez = 0;
+      var tekStep = '\0';
+      var thisRez = false;
+      //var TekStr = document.getElementById("TekStr");
+
+        function click_Button(button) {
+            // Получаем имя кнопки
+            //const buttonName = button.name;
+
+            // Выводим имя кнопки в консоль
+            //console.log(`Кнопка с именем: ${ buttonName } была нажата.`);
+            switch (button.name) {
+                case "Butt1": AddNumber(1); break;
+                case "Butt2": AddNumber(2); break;
+                case "Butt3": AddNumber(3); break;
+                case "Butt4": AddNumber(4); break;
+                case "Butt5": AddNumber(5); break;
+                case "Butt6": AddNumber(6); break;
+                case "Butt7": AddNumber(7); break;
+                case "Butt8": AddNumber(8); break;
+                case "Butt9": AddNumber(9); break;
+                case "Butt0": AddNumber(0); break;
+                case "ButtPlus": AddSimvol('+'); break;
+                case "ButtMinus": AddSimvol('-'); break;
+                case "ButtDel": AddSimvol('/'); break;
+                case "ButtMult": AddSimvol('*'); break;
+                case "ButtT": AddSimvol('.'); break;
+                case "ButtC": _Reset(); break;
+                case "ButtCE":
+                    if (thisRez) _Reset();
+                    else TekStr.Text = "";
+                    break;
+                case "ButtBs":
+                    if (thisRez) _Reset();
+                    if (TekStr.Text != "") TekStr.value = TekStr.value.slice(0,-1);
+                    break;
+                case "ButtRez":
+                    AddSimvol('=');
+                    if (TekStr.value != "error") TekStr.value = rez;
+                    thisRez = true;
+                    tekStep = '\0';
+                    break;
+            }
+
+
+
+            // Получаем элемент, который инициировал событие
+            //const targetElement = event.target;
+
+            // Получаем имя тега элемента
+            //const elementName = targetElement.tagName;
+
+            // Получаем ID элемента (если он есть)
+            //const elementId = targetElement.id;
+
+            //console.log(`Событие вызвано элементом: ${elementName} с ID: ${elementId}`);
+
+
+        }
+
+        function AddNumber(Num)
+        {
+            var TekStr = document.getElementById("TekStr");
+            var TempStr = document.getElementById("TempStr");
+            //alert(TekStr.value.length);
+            //let txt =
+                //TekStr.value.length;
+            //display_text.innerHTML = `<h2>${text.value}</h2>`;
+
+
+            if (thisRez == true) return;
+
+            if (!(Num === 0 && TekStr.value.length == 0 && TekStr.value == "")) {
+                TekStr.value = TekStr.value + Num;
+                TekStr.innerHTML = TekStr.value;
+            }
+            //alert(TekStr.value);
+        }
+
+        function AddSimvol(s) {
+            //alert(parseInt(TekStr.value));
+            if (thisRez == true) return;
+            if (s === '.') {
+                if (TekStr.value.Length == 0) TekStr.value = "0" + s;
+                else
+                    //if (!TekStr.value.Contains("."))
+                        TekStr += s;
+            }
+            else {
+                 if (tekStep === '\0') {
+                     try {
+                         rez = parseInt(TekStr.value);
+                     }
+                     catch
+                     {
+                         TekStr.value = "error";
+                         TekStr.innerHTML = TekStr.value;
+                         return;
+                     }
+                 }
+                //alert(s);
+                else Calculate(TekStr.value, tekStep);
+
+                if (TekStr.value != "error") {
+                    if ((s == '*' || s == '/') && (tekStep == '+' || tekStep == '-')) {
+                       // alert(s);
+                        TempStr.value = "";
+                        AddStroka(rez + s);
+                    }
+                    else AddStroka(TekStr.value + s);
+                    tekStep = s;
+                    TekStr.value = "";
+                    TekStr.innerHTML = TekStr.value;
+                }
+            }
+        }
+
+        function AddStroka(st)
+        {
+            TempStr.value += st;
+            TempStr.innerHTML = TempStr.value;
+        }
+
+        function Calculate(numS, s)
+        {
+            let num = 0;
+                try {
+                    num = parseInt(numS);
+                }
+                catch
+                {
+                    TekStr.value = "error";
+                    TekStr.innerHTML = TekStr.value;
+                    return;
+                }
+                switch (s) {
+                    case '*': rez *= num; break;
+                    case '/': if (num == 0) { TekStr.value = "error"; TekStr.innerHTML = TekStr.value; return; }
+                    else rez /= num; break;
+                    case '+': rez += num; break;
+                    case '-': rez -= num; break;
+                }
+        }
+        
+        function _Reset()
+        {
+                 TekStr.value = "";
+                 TekStr.innerHTML = TekStr.value;
+                 TempStr.value = "";
+                 TempStr.innerHTML = TekStr.value;
+            rez = 0;
+            thisRez = false;
+            tekStep = '\0';
+        }
+
+    </script>
 
 </body>
 </html>
