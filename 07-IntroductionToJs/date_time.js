@@ -26,7 +26,9 @@ function tick_timer() {
 	}
 	else { document.getElementById("date").innerHTML = "" }
 
-	document.getElementById("weekday").innerHTML = document.getElementById("show-weekday").checked ? current_time.toLocaleString("default", { weekday: "long" }) :"";
+	//document.getElementById("weekday").innerHTML = document.getElementById("show-weekday").checked ? current_time.toLocaleString("default", { weekday: "long" }) :"";
+
+	document.getElementById("weekday").innerHTML = 	document.getElementById("show-weekday").checked ? current_time.toLocaleString("default", { weekday: "long" }) : ""; 
 
 	let hh = checkNumber(current_time.getHours());
 	let mm = checkNumber(current_time.getMinutes());
