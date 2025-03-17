@@ -6,166 +6,90 @@
     <link rel="stylesheet" href="events.css" />
     <title>Events</title>
 </head>
-<body>
-    <div id="header">
-        <h1>Events</h1>
-        <div  >
-            <img src="img/moon.png" alt="Alternate Text"  id="switch" onclick="switch_button()"/>
-        </div>
-    </div>
-    <div id="number" style="width:100px;height:50px;background-color:lightblue" onclick="increment()">
-        <h2>Init</h2>
-    </div>
-    
-    <div>
-        <label>Введите время задержки картинки,мс:</label>
-        <input type="text" name="timeSet"
-               id="timeSet"
-               size="5"
-               minlenght="1" maxlength="5" />
-    </div>
+<body onload="tick_timer()">
+	<div id="header">
+		<h1>Events</h1>
+		<div>
+			<img src="img/moon.png" alt="Alternate Text" id="switch" onclick="switch_button()" />
+		</div>
+	</div>
+	<div id="number" style="width:100px;height:50px;background-color:lightblue" onclick="increment()">
+		<h2>Init</h2>
+	</div>
 
-    <input id="text" type="text" oninput="show_text()" />
-    <input id="show" type="button" value="Show" onclick="show_text()" />
-    <div id="display_text"></div>
+	<div>
+		<label>Введите время задержки картинки,мс:</label>
+		<input type="text" name="timeSet"
+			   id="timeSet"
+			   size="5"
+			   minlenght="1" maxlength="5" />
+	</div>
 
-    <div style="display:grid; grid-gap:5px;">
-        <img id="image" src="#" alt="Выберите картинку: " style="width:200px;height:200px;border:solid 1px;" />
-        <input id="file" type="file" onchange="set_image()" />
-    </div>
+	<input id="text" type="text" oninput="show_text()" />
+	<input id="show" type="button" value="Show" onclick="show_text()" />
+	<div id="display_text"></div>
 
-    <div id="dom" style="width:100px;height:50px;background-color:lightblue">
-        <ul>
-            <li>Item1</li>
-            <ol>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ol>
-            <li>Item2</li>
-            <li>Item3</li>
-        </ul>
+	<div style="display:grid; grid-gap:5px;">
+		<img id="image" src="#" alt="Выберите картинку: " style="width:200px;height:200px;border:solid 1px;" />
+		<input id="file" type="file" onchange="set_image()" />
+	</div>
 
-    </div>
+	<div id="dom" style="width:100px;height:50px;background-color:lightblue">
+		<ul>
+			<li>Item1</li>
+			<ol>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ol>
+			<li>Item2</li>
+			<li>Item3</li>
+		</ul>
 
-    <!--<div class="dom" style="width:100px;height:50px;background-color:lightblue">
-        <ul>
-            <li>class1</li>
-            <ol>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ol>
-            <li>class2</li>
-            <li>class3</li>
-        </ul>
+	</div>
 
-    </div>-->
-    <!---->
+	<!--<div class="dom" style="width:100px;height:50px;background-color:lightblue">
+		<ul>
+			<li>class1</li>
+			<ol>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ol>
+			<li>class2</li>
+			<li>class3</li>
+		</ul>
 
-    <div id="dom" style="width:100px;height:50px;background-color:lightgreen">
+	</div>-->
+	<!---->
+
+	<div id="dom" style="width:100px;height:50px;background-color:lightgreen">
 
 
-    </div>
-    <script>
-        //onload="set_init_path()"
-        var i = 0;
-        function increment() {
+	</div>
 
-            i++;
-            //document.writeln(i);
-            let number = document.getElementById("number");
-            number.innerHTML = `<h2>${i}</h2>`;
+	<hr />
+	<h2>Date & Time</h2>
+	<hr />
+	<div id="date"></div>
+	<div id="time"></div>
+	<div id="show-date-conteiner" style="width:100%; text-align:center">
 
-        }
+		<input type="checkbox" id="show-date" />
+		<label for="show-date"> Показать дату:</label>
 
-        function show_text() {
+		<input type="checkbox" id="show-weekday" />
+		<label for="show-weekday"> Показать день недели:</label>
+	</div>
+	<div id="date-and-time">
 
-            let text = document.getElementById("text");
-            let display_text = document.getElementById("display_text");
-            display_text.innerHTML = `<h2>${text.value}</h2>`;
-            //alert(text.value);
-        }
 
-        function set_init_path() {
-            let file = document.getElementById("file");
-            file.value = window.location.pathname;
+	</div>
 
-        }
-
-        function set_image() {
-            let image = document.getElementById("image");
-            let path = document.getElementById("file");
-            //let paph = window.location.pathname;
-            //this.value = path;
-            //alert(file.value);
-            let path_splitted = path.value.split('\\');///.findLast();
-
-            let file = path_splitted[path_splitted.length - 1];
-            alert(file);
-            image.src = file;
-
-        }
-
-    </script>
-
-    <script>
-
-        //console.log(document.getElementsByTagName("h1"));
-        // let dom = document.getElementById("dom");
-        //let dom = document.querySelectorAll("#dom");
-        let dom = document.querySelector("#dom");
-        console.log(dom);
-        if (dom) {
-            //dom.append(`append()`);
-            // dom.prepend(`prepend()`);
-            dom.before(`before()`);
-            dom.after(`after()`);
-            //dom.replaceWith("<h2>Здесь был div</h2>");
-
-            let counter = document.getElementById("number");
-            counter.style.cssText += "background-color:darckblue;";
-            dom.replaceWith(counter);
-            // console.log(dom.innerHTML);// = "<h2>innerHTML</h2>");
-            //console.log(dom);
-            //console.log(dom.outerHTML);// = "<h2>outerHTML</h2>");
-            //console.log(dom); }
-        }
-    </script>
-
-    <script>
-        
-        //console.log(switch_btn.src.split('/').at(-1));
-
-        function switch_button() {
-            let switch_btn = document.getElementById("switch");
-            let image = switch_btn.src.split('/').at(-1);
-
-            let timeS = document.getElementById("timeSet");
-
-            //if (switch_btn.src.split('/').at(-1) === `sun.png`) switch_btn.src = "img/moon.png";
-            //else switch_btn.scr = "img/sun.png";
-
-            //switch_btn.src = switch_btn.src.split('/').at(-1) === 'sun.png' ? 'img/moon.png' : 'img/sun.png';
-
-            switch_btn.style.opacity = 0; // Сначала скрываем текущее изображение
-
-            setTimeout(() => {
-            // Меняем изображение после того, как оно стало невидимым
-            switch_btn.src = `img/${image === 'sun.png' ? 'moon.png' : 'sun.png'}`;
-                switch_btn.style.opacity = 1; // Показываем новое изображение
-            }, parseInt(timeS.value)); // Задержка, чтобы дождаться завершения анимации
-            console.log(parseInt(timeS.value));
-            document.body.style.backgroundColor = image === 'moon.png' ? '#323232' : 'white';
-            document.body.style.color = image === 'sun.png' ? '#323232' : 'white';
-
-            document.body.style.transition = `background-color 3s, color 3s`;
-            //switch_btn.
-   
-
-        }
-
-    </script>
+	<script type="text/javascript" src="Script1.js"></script>
+	<script type="text/javascript" src="Script2.js"></script>
+	<script type="text/javascript" src="switch_button.js"></script>
+	<script type="text/javascript" src="date_time.js"></script>
 
 </body>
 </html>

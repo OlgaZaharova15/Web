@@ -12,3 +12,12 @@
     margin: 24px;
     transition: opacity 1s ease; /* Плавный переход для изображения */
 }
+
+#date, #time, #weekday {
+
+    width:100%;
+    height:50px;
+    font-size:32px;
+    text-align:center;
+
+}
