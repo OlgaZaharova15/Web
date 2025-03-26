@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Тест</title>
+</head>
+<body>
+
+	<h1>Тест на знание JavaScript</h1>
+	<!--<form id="quizForm">-->
+	<div class="question">
+		<p>1. Какой метод используется для добавления элемента в массив?</p>
+		<label><input type="radio" name="q1" value="a"> a) push()</label><br>
+		<label><input type="radio" name="q1" value="b"> b) add()</label><br>
+		<label><input type="radio" name="q1" value="c"> c) insert()</label><br>
+	</div>
+
+	<div class="question">
+		<p>2. Какой из следующих типов данных не является примитивным в JavaScript?</p>
+		<label><input type="radio" name="q2" value="a"> a) String</label><br>
+		<label><input type="radio" name="q2" value="b"> b) Number</label><br>
+		<label><input type="radio" name="q2" value="c"> c) Object</label><br>
+	</div>
+
+	<div class="question">
+		<p>3. Какой оператор используется для сравнения значений и типов?</p>
+		<label><input type="radio" name="q3" value="a"> a) ==</label><br>
+		<label><input type="radio" name="q3" value="b"> b) ===</label><br>
+		<label><input type="radio" name="q3" value="c"> c) =</label><br>
+	</div>
+
+	<div class="question">
+		<p>4. Какой метод используется для преобразования строки в число?</p>
+		<label><input type="radio" name="q4" value="a"> a) parseInt()</label><br>
+		<label><input type="radio" name="q4" value="b"> b) toNumber()</label><br>
+		<label><input type="radio" name="q4" value="c"> c) convertToInt()</label><br>
+	</div>
+
+	<div class="question">
+		<p>5. Какой метод используется для создания нового массива из существующего с изменениями?</p>
+		<label><input type="radio" name="q5" value="a"> a) map()</label><br>
+		<label><input type="radio" name="q5" value="b"> b) filter()</label><br>
+		<label><input type="radio" name="q5" value="c"> c) reduce()</label><br>
+	</div>
+
+	<button onclick="calculateScore()">Проверить ответы</button>
+
+	<!--</form>-->
+
+	<p id="result"></p>
+
+	<script src="test.js"></script>
+
+</body>
+</html>

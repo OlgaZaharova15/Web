@@ -21,3 +21,43 @@
     text-align:center;
 
 }
+#user-data > input {
+    font-size: 32px;
+}
+
+#differens{
+    width:100%;
+    height:50px;
+    background-color:lightblue;
+}
+#difference {
+    width: 100%;
+    height: 50px;
+    background-color: lightblue;
+}
+#display {
+    display: flex;
+    justify-content: space-around;
+}
+
+.time-block {
+    width: 90px;
+    height: 120px;
+    text-align: center;
+    font-size: 32px;
+    border: solid 2px;
+    border-radius: 8px;
+}
+
+.time-unit {
+    height: 80px;
+    background-color: blue;
+    color: white;
+    padding: 16px 0 0 0;
+}
+
+.time-marker {
+    background-color: red;
+    color: white;
+    font-size: 24px;
+}
