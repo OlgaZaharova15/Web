@@ -1,0 +1,10 @@
+﻿div
+{
+	width:50px;
+}
+.sequnce{
+	border:solid 2px;
+	display:flex;
+	justify-content:space-between;
+
+}

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Classes</title>
+</head>
+<body>
+	<h1>Clases</h1>
+
+	<input type="file" id="fileInput" accept=".txt" />
+	<pre id="fileContent"></pre>
+
+	<script>
+		/*class Point {
+			#x;
+			#y;
+			constructor(x, y) {
+			this.#x=x;
+			this.#y=y;
+			}
+			get x() {
+				return this.#x
+			}
+			get y() {
+				return this.#y
+			}
+
+			set x(value) {
+				this.#x = value;
+			}
+			set y(value) {
+				this.#y = value;
+			}
+			print() {
+				document.write(`X = ${this.#x} Y = ${this.#y}`);
+			}
+			distance(other) {
+
+				//let x_distance = Math.pow(this.x - other.x);//this.x - other.x;
+				//let y_distance = this.y - other.y;
+				return Math.sqrt(Math.pow(this.x - other.x,2) + Math.pow(this.y - other.y,2));
+			}
+			static distance(A,B) {
+
+				//let x_distance = Math.pow(this.x - other.x);//this.x - other.x;
+				//let y_distance = this.y - other.y;
+				return Math.sqrt(Math.pow(A.x - B.x, 2) + Math.pow(A.y - B.y, 2));
+			}
+
+		}
+
+		//extends - наследование
+		class Point3D extends Point {
+			#z;
+			constructor(X, Y, Z) {
+				super(X, Y);
+				//this.#x = X
+				//this.#y = Y;
+				this.#z = Z;
+			}
+
+			print() {
+				super.print();
+				document.write(` Z = ${this.#z}`);
+			}
+
+		}
+		let space1 = new Point3D(1, 2, 3);
+		space1.print();
+		document.write(`<hr>`);
+		let A = new Point(2, 3);
+		A.print();
+
+		document.write(`<h3>Encapsulation:</h3>`);
+		document.write(`<h3>${A.x}</h3>`);
+		document.write(`<h3>${A.y}</h3>`);
+
+		/*A.x = 100;
+		A.y = 200;
+		A.print();
+
+		let B = new Point(7, 8);
+
+		document.write(`<h3>distance: ${A.distance(B)}</h3>`);
+		document.write(`<h3>distance (static): ${Point.distance(A,B)}</h3>`);*/
+
+
+
+
+	</script>
+
+	<script src="academy.js"></script>
+
+</body>
+</html>
