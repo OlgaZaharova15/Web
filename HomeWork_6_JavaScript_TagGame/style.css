@@ -1,0 +1,27 @@
+﻿body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Arial, sans-serif;
+}
+
+#board {
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: repeat(4, 100px);
+	gap: 5px;
+}
+
+.tile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: dodgerblue;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.empty {
+	background-color: transparent;
+}
