@@ -2,7 +2,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: Arial, sans-serif;
+	font-family: Calibri, sans-serif;
+	background: linear-gradient(to right,#80d8ff, #0091ea);
+	color: white;
+	font-size: 24px;
 }
 
 #board {
@@ -16,12 +19,28 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: dodgerblue;
+	background-color:   violet;
 	color: white;
-	font-size: 24px;
+	font-size: 32px;
 	cursor: pointer;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	transition: transform 0.5s ease;
 }
 
 .empty {
 	background-color: transparent;
+}
+#shuffle {
+	background-color: #008CBA; /* Цвет кнопки */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
 }
